@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+
+  .back-container {
+    background-image: url('/images/bg-stars.svg');
+    background-color: rgb(69, 40, 88);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .title-con {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+    z-index: 10; 
+  }
+
+  .mountains {
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
