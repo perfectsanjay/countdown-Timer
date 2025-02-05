@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Text', serif;
 }
 
 .container {
@@ -13,7 +20,7 @@
 
   .back-container {
     background-image: url('/images/bg-stars.svg');
-    background-color: rgb(69, 40, 88);
+    background-color: rgb(37, 25, 45);
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -44,5 +51,162 @@
     bottom: 0;
     left: 0;
     z-index: 2;
+  }
+  .countdown-timer{
+    position: absolute;
+    top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+  }
+  h1{
+    text-align: center;
+    color: hsl(345, 95%, 68%);
+    font-size: 80px;
+    background-color:hsl(242, 24%, 32%);
+    width: 120px;
+    height: 110px;
+    border-radius: 10px;
+
+  }
+  p{
+    margin-top: 10px;
+    text-align: center;
+    color:  hsl(0, 4%, 69%);
+  }
+  .footer-link{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    gap:40px;
+    z-index: 5;
+  }
+  .ball{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 10px;
+    height: 10px;
+    top:50px;
+    left: -6px;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .ball2{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 10px;
+    height: 10px;
+    top:50px;
+    left: 117px;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .line{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 120px;
+    height: .5px;
+    top:55px;
+    left: 5px;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .ball3{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 10px;
+    height: 10px;
+    top:50px;
+    left: 165px;
+    border-radius: 50%;
+    z-index: 5;
+
+  }
+  .line2{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 120px;
+    height: .5px;
+    top:55px;
+    left: 170px;
+    border-radius: 50%;
+    z-index: 5;
+
+  }
+  .ball4{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 10px;
+    height: 10px;
+    top:50px;
+    left: 285px;
+    border-radius: 50%;
+    z-index: 5;
+
+  }
+  .ball5{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 10px;
+    height: 10px;
+    top:50px;
+    left: 335px;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .line3{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 120px;
+    height: .5px;
+    top:55px;
+    left: 334px;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .ball6{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 10px;
+    height: 10px;
+    top:50px;
+    left: 455px;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .ball7{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 10px;
+    height: 10px;
+    top:50px;
+    left: 505px;
+    border-radius: 50%;
+    z-index: 5;
+
+  }
+  .line4{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 120px;
+    height: .5px;
+    top:55px;
+    left: 514px;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .ball8{
+    position: absolute;
+    background-color: rgb(37, 25, 45);
+    width: 10px;
+    height: 10px;
+    top:50px;
+    left: 624px;
+    border-radius: 50%;
+    z-index: 5;
   }
 }
