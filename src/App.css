@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +7,7 @@
 }
 
 body {
-  font-family: 'Red Hat Text', serif;
+  font-family: "Red Hat Text", serif;
 }
 
 .container {
@@ -17,196 +16,220 @@ body {
   justify-content: center;
   height: 100vh;
   position: relative;
+}
 
-  .back-container {
-    background-image: url('/images/bg-stars.svg');
-    background-color: rgb(37, 25, 45);
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.back-container {
+  background-image: url("/images/bg-stars.svg");
+  background-color: rgb(37, 25, 45);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.title-con {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: lighter;
+  padding: 5px;
+  z-index: 10;
+}
+
+.mountains {
+  width: 100vw;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.countdown-timer {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+h1 {
+  text-align: center;
+  color: hsl(345, 95%, 68%);
+  font-size: 80px;
+  background-color: hsl(242, 24%, 32%);
+  width: 120px;
+  height: 110px;
+  border-radius: 10px;
+}
+
+p {
+  margin-top: 10px;
+  text-align: center;
+  color: hsl(0, 4%, 69%);
+}
+
+.footer-link {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  z-index: 5;
+}
+
+.ball,
+.ball2,
+.ball3,
+.ball4,
+.ball5,
+.ball6,
+.ball7,
+.ball8 {
+  position: absolute;
+  background-color: rgb(37, 25, 45);
+  width: 10px;
+  height: 10px;
+  top: 50px;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.ball {
+  left: -6px;
+}
+.ball2 {
+  left: 117px;
+}
+.ball3 {
+  left: 165px;
+}
+.ball4 {
+  left: 285px;
+}
+.ball5 {
+  left: 335px;
+}
+.ball6 {
+  left: 455px;
+}
+.ball7 {
+  left: 505px;
+}
+.ball8 {
+  left: 624px;
+}
+
+.line,
+.line2,
+.line3,
+.line4 {
+  position: absolute;
+  background-color: rgb(37, 25, 45);
+  width: 120px;
+  height: 0.5px;
+  top: 55px;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.line {
+  left: 5px;
+}
+.line2 {
+  left: 170px;
+}
+.line3 {
+  left: 334px;
+}
+.line4 {
+  left: 514px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    min-height: 100vh;
   }
 
   .title-con {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 5px;
-    z-index: 10; 
+    font-size: 16px;
+    width: 90%;
+    top: 5%;
+  }
+
+  .countdown-timer {
+    position: relative;
+    top: 0;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 100px;
+  }
+
+  h1 {
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+  }
+
+  p {
+    font-size: 14px;
   }
 
   .mountains {
-    width: 100vw;
-    height: 200px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
+    height: auto;
+    width: 100%;
   }
-  .countdown-timer{
-    position: absolute;
-    top: 200px;
-    display: flex;
-    flex-direction: row;
+
+  .footer-link {
+    position: relative;
+    margin-top: 20px;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
+    flex-wrap: wrap;
+  }
 
-  }
-  h1{
-    text-align: center;
-    color: hsl(345, 95%, 68%);
-    font-size: 80px;
-    background-color:hsl(242, 24%, 32%);
-    width: 120px;
-    height: 110px;
-    border-radius: 10px;
-
-  }
-  p{
-    margin-top: 10px;
-    text-align: center;
-    color:  hsl(0, 4%, 69%);
-  }
-  .footer-link{
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    gap:40px;
-    z-index: 5;
-  }
-  .ball{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 10px;
-    height: 10px;
-    top:50px;
-    left: -6px;
-    border-radius: 50%;
-    z-index: 5;
-  }
-  .ball2{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 10px;
-    height: 10px;
-    top:50px;
-    left: 117px;
-    border-radius: 50%;
-    z-index: 5;
-  }
-  .line{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 120px;
-    height: .5px;
-    top:55px;
-    left: 5px;
-    border-radius: 50%;
-    z-index: 5;
-  }
-  .ball3{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 10px;
-    height: 10px;
-    top:50px;
-    left: 165px;
-    border-radius: 50%;
-    z-index: 5;
-
-  }
-  .line2{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 120px;
-    height: .5px;
-    top:55px;
-    left: 170px;
-    border-radius: 50%;
-    z-index: 5;
-
-  }
-  .ball4{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 10px;
-    height: 10px;
-    top:50px;
-    left: 285px;
-    border-radius: 50%;
-    z-index: 5;
-
-  }
-  .ball5{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 10px;
-    height: 10px;
-    top:50px;
-    left: 335px;
-    border-radius: 50%;
-    z-index: 5;
-  }
-  .line3{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 120px;
-    height: .5px;
-    top:55px;
-    left: 334px;
-    border-radius: 50%;
-    z-index: 5;
-  }
-  .ball6{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 10px;
-    height: 10px;
-    top:50px;
-    left: 455px;
-    border-radius: 50%;
-    z-index: 5;
-  }
-  .ball7{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 10px;
-    height: 10px;
-    top:50px;
-    left: 505px;
-    border-radius: 50%;
-    z-index: 5;
-
-  }
-  .line4{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 120px;
-    height: .5px;
-    top:55px;
-    left: 514px;
-    border-radius: 50%;
-    z-index: 5;
-  }
-  .ball8{
-    position: absolute;
-    background-color: rgb(37, 25, 45);
-    width: 10px;
-    height: 10px;
-    top:50px;
-    left: 624px;
-    border-radius: 50%;
-    z-index: 5;
+  .ball,
+  .ball2,
+  .ball3,
+  .ball4,
+  .ball5,
+  .ball6,
+  .ball7,
+  .ball8,
+  .line,
+  .line2,
+  .line3,
+  .line4 {
+    display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .countdown-timer {
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+

@@ -1,6 +1,34 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
+const targetDate = new Date('2025-03-01T00:00:00').getTime()  //set the launch date 
+
 function App() {
+
+const CalculateCountDown = () => {
+  const now = new Date().getTime()
+  const diffrence = targetDate-now;
+
+  if (diffrence<0) return {days:0,hour:0,minute:0,second:0};
+
+  return {
+    days: Math.floor(diffrence/(1000*60*60*24)),
+    hours: Math.floor(diffrence/(1000*60*60)%24),
+    minute: Math.floor(diffrence/(1000*60)%60),
+    seconds: Math.floor(diffrence/(1000)%60)
+  }
+  
+  
+  }
+  const [timeLeft, setTimeLeft] = useState(CalculateCountDown())
+
+ useEffect(() => {
+    const timer = setInterval(() =>{
+      setTimeLeft(CalculateCountDown())
+    }, 1000)
+    return () => clearInterval(timer); 
+ },[])
+
   return (
     <div className="container">
       <div className="back-container"></div>
@@ -13,34 +41,15 @@ function App() {
         alt="mountainsImg"
       />
       <div className="countdown-timer">
-        <div className="days-cont">
-          <div className="ball"></div>
-          <h1 className="day">08</h1>
-          <div className="line"></div>
-          <div className="ball2"></div>
-          <p>Days</p>
-        </div>
-        <div className="hours-cont">
-          <div className="ball3"></div>
-          <h1 className="hour">23</h1>
-          <div className="line2"></div>
-          <div className="ball4"></div>
-          <p>HOURS</p>
-        </div>
-        <div className="minutes-cont">
-          <div className="ball5"></div>
-          <h1 className="minute">55</h1>
-          <div className="line3"></div>
-          <div className="ball6"></div>
-          <p>MINUTES</p>
-        </div>
-        <div className="seconds-cont">
-          <div className="ball7"></div>
-          <h1 className="second">41</h1>
-          <div className="line4"></div>
-          <div className="ball8"></div>
-          <p>SECONDS</p>
-        </div>
+        {Object.entries(timeLeft).map(([label,value],index) => (
+          <div key={index} className={`${label}-cont`}>
+            <div className={`ball${index * 2 + 1}`}></div>
+            <h1 className={label}>{String(value).padStart(2, "0")}</h1>
+            <div className={`line${index+1}`}></div>
+            <div className={`ball${index *2 +2}`}></div>
+            <p>{label}</p>
+          </div>
+        ))}
       </div>
       <div className="footer-link">
         <a href="">
